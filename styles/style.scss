@@ -1,0 +1,239 @@
+@import "./variables";
+@import "./screens";
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background:$firstcolor;
+}
+//sürekli kullanacağım şeyler
+.myText{
+    @include textbox();
+}
+
+.myButton {
+    @include button();
+}   
+
+.myh1{
+    text-align: center;
+    color: $fourthcolor;
+}
+
+// Toggle Dark/Light
+.darkMode{
+    background: #000;
+    color: $thirdcolor;
+}
+.myToggle{
+    display: flex;
+    
+}
+.toggle{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.toggle input{
+    position:absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background: $thirdcolor;
+    transition: 0.4s;
+    width: 40px;
+    height: 20px;
+}
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    background: $fourthcolor;
+    transition: 0.4s;
+    top: 1px;
+    left: 2px;
+}
+
+input:checked + .slider{
+    background-color: $secondarycolor;
+}
+
+input:checked + .slider::before{
+    transform: translateX(16px);
+}
+ 
+.slider.round {
+    border-radius: 10px;
+}
+
+.slider.round::before{
+    border-radius: 10px;
+}
+
+//modal Kısmı
+.myModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 5;
+
+}
+
+.theWord {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 30%;
+    background: $firstcolor;
+    border-radius: 20px;
+    border-top-right-radius: 5px;
+    
+}
+
+.message{
+    @include elyazisi();
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: white;
+    align-items: center;
+    width: 80%;
+    padding-top: 5%;
+    margin: auto;
+    strong{
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+    }
+    .cancelButton{
+        color: $secondarycolor;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+            color: $thirdcolor;
+        }
+    }
+    
+}
+
+.veriekle{
+    @include arkaplan();
+    color: white !important;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+
+.addGroup{
+    margin-top: 4%;
+}
+
+
+#update, #delete, #cancel {
+    display: none;
+}
+
+#delete {
+    background: red;
+    &:hover {
+        color: black;
+    }
+}
+#cancel {
+    background: #ccc;
+}
+
+.myDiv {
+    
+    padding: 0;
+    position: relative;
+    margin: 1%;
+    opacity: 1;
+    min-height: 550px;
+    border: 3px solid;
+    border-color: rgb(random(255), random(255), random(255));
+    border-radius: 20px;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.7;
+        z-index: -1;
+        
+    }
+    table {
+        
+        padding: 0;
+        color: $thirdcolor;
+        --bs-table-hover-color: #fff;
+        .trler tr{
+            cursor: pointer;
+            
+        }
+    }
+}
+
+.table>:not(caption)>*>*{
+    padding: 0.5rem 0 0.5rem 0.3rem;
+}
+
+#updateItem {
+    background:none;
+    &:hover{
+        color:black;    
+    }
+    &:active {
+        color: white;
+        border: none;
+     }
+     
+}
+
+#deleteItem{
+    &:hover{
+        color:red;    
+    }
+    &:active {
+        color: white;
+        border: none;
+     }
+}
+
+.ciz{
+    text-decoration: line-through;
+    opacity: 0.7;
+    color: black;
+}
+
+.btn-danger {
+    border-radius: 10px;
+    padding: 0.5% 4%;
+
+}
+
+.hideItem{
+    display: none;
+}
+
+
+@import "./screens";

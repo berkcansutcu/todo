@@ -1,0 +1,329 @@
+@media only screen and (max-width: 1200px) {
+  #hangi, #saat, #yazi {
+    font-size: 0.8rem;
+  }
+  .theWord {
+    width: 25%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  input[type="text"] {
+    font-size: 0.8rem;
+  }
+  #hangi, #saat, #yazi {
+    width: 100px;
+  }
+  .theWord {
+    width: 35%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #hangi, #saat, #yazi {
+    width: 100%;
+  }
+  .theWord {
+    width: 60%;
+    height: 40%;
+  }
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #3E8E7E;
+}
+
+.myText {
+  border: none;
+  border-radius: 10px;
+  color: #FAEDC6;
+  padding: 0 2%;
+}
+
+.myText:focus {
+  background-color: #7CD1B8;
+}
+
+.myButton {
+  background-color: #7CD1B8;
+  color: white;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 5%;
+}
+
+.myButton:hover {
+  color: #3E8E7E;
+}
+
+.myh1 {
+  text-align: center;
+  color: #FAEDC6;
+}
+
+.darkMode {
+  background: #000;
+  color: #FABB51;
+}
+
+.myToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toggle {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background: #FABB51;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 40px;
+  height: 20px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  background: #FAEDC6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  top: 1px;
+  left: 2px;
+}
+
+input:checked + .slider {
+  background-color: #7CD1B8;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 10px;
+}
+
+.slider.round::before {
+  border-radius: 10px;
+}
+
+.myModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 5;
+}
+
+.theWord {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 30%;
+  background: #3E8E7E;
+  border-radius: 20px;
+  border-top-right-radius: 5px;
+}
+
+.message {
+  font-family: 'Corinthia', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  padding-top: 5%;
+  margin: auto;
+}
+
+.message strong {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.message .cancelButton {
+  color: #7CD1B8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.message .cancelButton:hover {
+  color: #FABB51;
+}
+
+.veriekle {
+  background: #FABB51;
+  color: white !important;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.addGroup {
+  margin-top: 4%;
+}
+
+#update, #delete, #cancel {
+  display: none;
+}
+
+#delete {
+  background: red;
+}
+
+#delete:hover {
+  color: black;
+}
+
+#cancel {
+  background: #ccc;
+}
+
+.myDiv {
+  padding: 0;
+  position: relative;
+  margin: 1%;
+  opacity: 1;
+  min-height: 550px;
+  border: 3px solid;
+  border-color: #8a319b;
+  border-radius: 20px;
+}
+
+.myDiv img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.myDiv table {
+  padding: 0;
+  color: #FABB51;
+  --bs-table-hover-color: #fff;
+}
+
+.myDiv table .trler tr {
+  cursor: pointer;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0 0.5rem 0.3rem;
+}
+
+#updateItem {
+  background: none;
+}
+
+#updateItem:hover {
+  color: black;
+}
+
+#updateItem:active {
+  color: white;
+  border: none;
+}
+
+#deleteItem:hover {
+  color: red;
+}
+
+#deleteItem:active {
+  color: white;
+  border: none;
+}
+
+.ciz {
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: black;
+}
+
+.btn-danger {
+  border-radius: 10px;
+  padding: 0.5% 4%;
+}
+
+.hideItem {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #hangi, #saat, #yazi {
+    font-size: 0.8rem;
+  }
+  .theWord {
+    width: 25%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  input[type="text"] {
+    font-size: 0.8rem;
+  }
+  #hangi, #saat, #yazi {
+    width: 100px;
+  }
+  .theWord {
+    width: 35%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #hangi, #saat, #yazi {
+    width: 100%;
+  }
+  .theWord {
+    width: 60%;
+    height: 40%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

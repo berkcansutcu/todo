@@ -1,0 +1,43 @@
+@media only screen and(max-width: 1200px) {
+    #hangi, #saat, #yazi {
+        font-size: 0.8rem;
+       
+    }
+
+    .theWord {
+        width: 25% ;
+        height: 40% ;  
+    }
+    
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    input[type="text"] {
+        font-size: 0.8rem;
+    
+    }
+
+    #hangi, #saat, #yazi {
+        width: 100px;
+       
+    }
+
+    .theWord {
+        width: 35% ;
+        height: 40% ;  
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    #hangi, #saat, #yazi {
+        width: 100%;
+       
+    } 
+
+    .theWord {
+        width: 60% ;
+        height: 40% ;  
+    }
+}

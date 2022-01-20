@@ -1,0 +1,38 @@
+// Colors
+$firstcolor : #3E8E7E;
+$secondarycolor : #7CD1B8;
+$thirdcolor: #FABB51;
+$fourthcolor: #FAEDC6;
+$bgcolordark: rgb(0, 0, 0);
+
+
+// Fonts
+@mixin elyazisi(){
+    font-family: 'Corinthia', cursive;
+}
+
+@mixin arkaplan(){
+    background:$thirdcolor;
+}
+
+@mixin textbox(){
+    border:none;
+    border-radius: 10px;
+    color:$fourthcolor;
+    padding: 0 2%;
+    &:focus{
+        background-color: $secondarycolor;
+    }
+    
+}
+
+@mixin button {
+    background-color: $secondarycolor;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 0 5%;
+    &:hover{
+        color: $firstcolor; 
+    }
+}
