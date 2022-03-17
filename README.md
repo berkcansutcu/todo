@@ -4,3 +4,4 @@ Günlük planlarınızı düzenleyebileceğiniz araç.
 Sayfayı her yenilediğinizde motive edici bir söz geliyor. 
 
 
+[![](https://i.ibb.co/JkL7WL6/todo.png)](https://i.ibb.co/JkL7WL6/todo.png)
